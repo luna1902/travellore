@@ -2,12 +2,12 @@ package com.example.fp.entity;
 
 import java.util.Date;
 
-public class Trip {
+public class Bookings {
     private Long id;
-    private Long userId;
-    private Long tripName;
+    private Date bookingDate;
     private Date startDate;
     private Date endDate;
-    private Long budget;
     private String status;
+    private Long tourGuideId;
+    private Long userId;
 }
