@@ -1,5 +1,7 @@
 package com.example.fp.controller;
 
+import com.example.fp.dto.LoginRequest;
+import com.example.fp.dto.LoginResponse;
 import com.example.fp.dto.RegisterRequest;
 import com.example.fp.service.UserService;
 import org.springframework.http.HttpStatus;
@@ -24,5 +26,11 @@ public class AuthController {
     public ResponseEntity<String> register(@RequestBody RegisterRequest request) {
         String message=userService.registerUser(request);
         return ResponseEntity.ok(message);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody LoginRequest request) {
+        String loginResponse=userService.login(request).getMessage();
+        return ResponseEntity.ok(loginResponse);
     }
 }
