@@ -1,16 +1,15 @@
 package com.example.fp.entity;
-
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.Date;
 
+@Entity
 @Data
 public class Trip {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long tripName;
+    private String tripName;
     private Date startDate;
     private Date endDate;
     private Long budget;

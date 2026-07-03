@@ -13,7 +13,11 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(auth->auth.requestMatchers("/api/register","/api/login","api/destination/**"
+                .authorizeHttpRequests(auth->auth.requestMatchers(
+                        "/api/register"
+                                ,"/api/login"
+                                ,"api/destination/**"
+                                ,"/api/trips/**"
                                 ).permitAll()
                         .anyRequest().authenticated()
                 );

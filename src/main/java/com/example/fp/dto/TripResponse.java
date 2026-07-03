@@ -1,7 +1,10 @@
 package com.example.fp.dto;
 
+import lombok.Data;
+
 import java.util.Date;
 
+@Data
 public class TripResponse {
     private Long id;
     private String tripName;
