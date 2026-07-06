@@ -10,7 +10,7 @@ const Home = () => {
     
     
       <DestinationCarousel/>
-   
+       <SearchBar/>
    
     </div>
    )
