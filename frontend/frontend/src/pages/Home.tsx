@@ -5,11 +5,12 @@ import Navbar from "../components/layout/Navbar";
 
 const Home = () => {
    return(
-     < div className="bg-[#090916]">
+     < div className="">
     <Navbar/>
     
     
       <DestinationCarousel/>
+      
        <SearchBar/>
    
     </div>
