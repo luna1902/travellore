@@ -115,7 +115,7 @@ export default function DestinationCarousel() {
         </div>
       </div>
       <div
-        className="relative w-full max-w-7xl h-[350px] md:h-[450px] xl:h-[600px] flex justify-center items-center "
+        className="relative w-full max-w-7xl h-[350px] md:h-[450px] xl:h-[550px] flex justify-center items-center "
         style={{
           perspective: 3000,
           transformStyle: "preserve-3d",
