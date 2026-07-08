@@ -8,7 +8,7 @@ const SearchBar = () => {
     
 
     return (
-        <div className=" relative transform translate-x-0.5  max-w-6xl backdrop-blur-xl bg-[#12203a]/80 border border-gray-800 shadow-2xl justify-center w-screen">
+        <div className="  transform translate-x-0.5  max-w-fit backdrop-blur-xl bg-[#12203a]/80 border border-gray-800 shadow-2xl justify-center w-screen p-10">
 
             <div className=" flex flex-wrap gap-4 pt-5 px-5 justify-center">
                {tabs.map((tab)=>(

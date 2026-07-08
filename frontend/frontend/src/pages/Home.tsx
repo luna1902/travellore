@@ -6,18 +6,16 @@ import SearchBar from "../components/home/SearchBar";
 import Navbar from "../components/layout/Navbar";
 
 const Home = () => {
-   return(
-     < div className="">
-    <Navbar/>
-    
-    
-      <DestinationCarousel/>
+  return (
+    <div className="">
+      <Navbar />
+      <DestinationCarousel />
+      <SearchBar />
+      <Features />
+      <PopularDestination />
       
-       <SearchBar/>
-       <Features/>
-       <PopularDestination/>
     </div>
-   )
-}
+  );
+};
 
 export default Home;

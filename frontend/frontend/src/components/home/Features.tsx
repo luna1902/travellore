@@ -14,11 +14,12 @@ const Features = () => {
         <p>Everything you need for the perfect journey</p>
       </div>
 
-      <div className=" grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 mx-10 ">
+      <div className=" grid grid-cols-1 gap-2 md:grid-cols-4 lg:grid-cols-4 mx-10 rounded-full ">
         <FeaturesField
           icon={<FaCompass />}
           title="AI Recommendations"
           children="Personified suggestions just for you"
+  
         />
 
         <FeaturesField

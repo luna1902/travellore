@@ -1,3 +1,19 @@
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  width: 40px;
+  height: 48px;
+  border-radius: 999px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 /* .counter {
   font-size: 16px;
   padding: 5px 10px;

@@ -1,6 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Heart, MapPin, Star } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Fullscreen,
+  Heart,
+  MapPin,
+  Star,
+} from "lucide-react";
 
 import { destinations } from "../constants/carouselData";
 import SearchBar from "./home/SearchBar";
@@ -31,9 +38,10 @@ export default function DestinationCarousel() {
 
   const CARD_WIDTH = screenWidth > 1280 ? 420 : screenWidth > 768 ? 330 : 250;
 
-  const CARD_HEIGHT = screenWidth > 1280 ? 560 : screenWidth > 768 ? 460 : 360;
+  const CARD_HEIGHT = screenWidth > 1280 ? 560 : screenWidth > 768 ? 400 : 360;
 
-  const X_RADIUS = screenWidth > 1280 ? 430 : screenWidth > 768 ? 260 : 120;
+  const X_RADIUS =
+    screenWidth > 1280 ? 430 : screenWidth > 768 ? 260 : Fullscreen;
 
   const Y_RADIUS = screenWidth > 1280 ? 70 : screenWidth > 768 ? 50 : 25;
   const total = destinations.length;
@@ -96,26 +104,30 @@ export default function DestinationCarousel() {
   }, [active, total, screenWidth]);
   return (
     <section
-      className=" overflow-hidden h-[550px] md:h-[650px] lg:h-[800px] p-5  bg-[#090916] flex flex-col justify-center items-center "
+      className="w-full min-h-screen h-[550px] md:h-[650px] lg:h-[400px]  bg-[#090916] flex justify-between  max-w-[1440px] mx-auto  md:px-12 lg:px-20 xl:px-8 overflow-hidden  "
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#7c3aed40,transparent_70%)]" />
-      <div className="absolute left-0.5 translate-x-0.5 bottom-24 w-[90%] max-w-6xl  bg-gradient-to-r from-violet-600/25 via-blue-500/15 to-cyan-400/10 mx-auto h-[220px] rounded-full blur-[120px]" />
-      <div className="relative z-20 text-center ">
-        <h1 className="text-4xl  md:text-5xl xl:text-6xl font-black text-white mt-10">
-          Explore Beyond <span className="text-violet-500">Boundaries</span>
+      <div className=" absolute inset-0 bg-[radial-gradient(circle_at_center,#7c3aed40,transparent_70%)]" />
+      <div className=" absolute left-0.5 translate-x-0.5 bottom-24 w-[90%] max-w-6xl  bg-gradient-to-r from-violet-600/25 via-blue-500/15
+       to-cyan-400/10 mx-auto h-[220px] rounded-full blur-[120px]" />
+      <div className="w-full lg:w-[42%] pr-8 relative z-20 text-left ">
+        <h1 className="text-6xl  md:text-5xl lg:text-7xl leading-tight font-black text-white ">
+          Explore
+          <br />
+          Beyond
+          <br />
+          <span className="text-violet-500">Boundaries</span>
         </h1>
-
-        <div className=" text-justify">
-          <p className="text-gray-400 mt-6 text-sm md:text-base xl:text-lg ">
+        <div className=" mt-8 max-w-[520px]">
+          <p className="text-gray-300 leading-8 text-sm md:text-base xl:text-lg ">
             Discover breathtaking destinations,plan perfect trips, connect with
             travelers and get personalised recommendations
           </p>
         </div>
       </div>
       <div
-        className="relative w-full max-w-7xl h-[350px] md:h-[450px] xl:h-[550px] flex justify-center items-center "
+        className="relative w-[55%]  max-w-7xl h-[350px] md:h-[450px] lg:h-[550px] flex justify-center items-center "
         style={{
           perspective: 3000,
           transformStyle: "preserve-3d",
@@ -261,8 +273,8 @@ export default function DestinationCarousel() {
           </motion.div>
         ))}
       </div>
-      Left Arrow
-      <button
+      {/* Left Arrow */}
+      {/* <button
         onClick={previous}
         className="
         absolute
@@ -283,8 +295,8 @@ export default function DestinationCarousel() {
         "
       >
         <ChevronLeft className="mx-auto text-white" />
-      </button>
-      {/* Right Arrow */}
+      </button> */}
+{/* 
       <button
         onClick={next}
         className="
@@ -306,7 +318,7 @@ export default function DestinationCarousel() {
         "
       >
         <ChevronRight className="mx-auto text-white" />
-      </button>
+      </button> */}
     </section>
   );
 }

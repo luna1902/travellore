@@ -4,7 +4,7 @@ const FeaturesField= ({
     children
 })=>{
     return(
-        <div className=" flex bg-[#12203a]/80  px-5 py-4 my-8 hover:border-violet-500 border border-transparent transition-all duration-300">
+        <div className=" flex bg-[#12203a]/80  px-5 py-4 my-8 hover:border-violet-500 border border-transparent transition-all duration-300 rounded-2xl shadow-2xl ">
             <div className="  text-violet-500 text-xl">
                 {icon}
             </div>
